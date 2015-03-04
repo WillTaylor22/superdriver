@@ -1,4 +1,9 @@
-<h2>Sign up</h2>
+  <%= render "header" %>
+
+  <div data-role="content">
+
+
+<h2>Sign up FREE</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
@@ -49,12 +54,12 @@
     <% if @validatable %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %>
-    <%= f.password_field :password, autocomplete: "off", value: "12345678" %>
+    <%= f.password_field :password, autocomplete: "off" %>
   </div>
 
   <div class="field">
     <%= f.label :password_confirmation %>
-    <%= f.password_field :password_confirmation, autocomplete: "off", value: "12345678" %>
+    <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 
   <div class="actions">
@@ -63,3 +68,5 @@
 <% end %>
 
 <%= render "users/shared/links" %>
+
+</div>
